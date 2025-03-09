@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>IoT Home Automation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>IoT Home Automation System</h1>
+  <div id="controls">
+    <h2>Device Controls</h2>
+    <div class="device">
+      <h3>Light</h3>
+      <button onclick="controlDevice('light', 'ON')">Turn ON</button>
+      <button onclick="controlDevice('light', 'OFF')">Turn OFF</button>
+      <p>Status: <span id="status-light">Unknown</span></p>
+    </div>
+    <div class="device">
+      <h3>Fan</h3>
+      <button onclick="controlDevice('fan', 'ON')">Turn ON</button>
+      <button onclick="controlDevice('fan', 'OFF')">Turn OFF</button>
+      <p>Status: <span id="status-fan">Unknown</span></p>
+    </div>
+    <!-- Add more devices as needed -->
+  </div>
+  
+  <div id="logs">
+    <h2>Logs</h2>
+    <ul id="logList"></ul>
+  </div>
+  
+  <!-- Include Socket.io -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
